@@ -44,8 +44,14 @@ a:focus-visible,button:focus-visible,select:focus-visible,textarea:focus-visible
 .update .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:2px}
 /* property cards */
 .props{display:flex;flex-direction:column;gap:12px;margin:10px 0 6px}
-h4.subhead{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:16px 0 0;font-weight:500}
-h4.subhead span{text-transform:none;letter-spacing:0;font-family:var(--body);font-size:.85rem;margin-left:8px}
+h4.subhead{font-family:var(--display);font-size:1rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin:18px 0 0;padding:8px 14px;border-radius:8px 8px 0 0;display:flex;align-items:baseline;gap:10px}
+h4.subhead span{text-transform:none;letter-spacing:0;font-family:var(--body);font-size:.85rem;font-weight:400;opacity:.85}
+h4.subhead.rent{background:var(--accent);color:var(--accent-ink)}
+h4.subhead.sfh{background:var(--warm);color:#fff}
+.props.rent{border-left:4px solid var(--accent);padding-left:10px;margin-top:0}
+.props.sfh{border-left:4px solid var(--warm);padding-left:10px;margin-top:0}
+.cat{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:4px;margin-left:4px}
+.cat.rent{background:var(--accent-soft);color:var(--accent)} .cat.sfh{background:var(--warm-soft);color:var(--warm)}
 .prop{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;display:grid;grid-template-columns:1fr auto;gap:6px 16px}
 .prop.dropped{opacity:.72}
 .prop .head{grid-column:1;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
@@ -88,7 +94,7 @@ button:disabled{opacity:.5;cursor:default}
 
   function propCard(p, editing){
     var h = '<div class="prop '+esc(p.status)+'" data-id="'+esc(p.id)+'">';
-    h += '<div class="head"><h4>'+(p.rank?'<span class="rank">#'+esc(p.rank)+'</span> ':'')+(p.url?'<a href="'+esc(p.url)+'">'+esc(p.addr)+'</a>':esc(p.addr))+'</h4><span class="price">'+esc(p.price)+'</span><span class="sub">'+esc(p.area)+(p.mls?' · MLS '+esc(p.mls):'')+' · '+esc(p.type)+'</span></div>';
+    h += '<div class="head"><h4>'+(p.rank?'<span class="rank">#'+esc(p.rank)+'</span> ':'')+(p.url?'<a href="'+esc(p.url)+'">'+esc(p.addr)+'</a>':esc(p.addr))+'</h4><span class="price">'+esc(p.price)+'</span><span class="sub">'+esc(p.area)+(p.mls?' · MLS '+esc(p.mls):'')+' · '+esc(p.type)+'</span><span class="cat '+(isSFH(p)?'sfh':'rent')+'">'+(isSFH(p)?'Single family':'Rental')+'</span></div>';
     h += '<span class="pill '+esc(p.status)+'">'+esc(LABEL[p.status]||p.status)+'</span>';
     h += '<div class="body"><p>'+esc(p.facts)+'</p>';
     if(p.net) h += '<p><span class="lbl">Monthly</span><span class="net">'+esc(p.net)+'</span></p>';
@@ -109,8 +115,8 @@ button:disabled{opacity:.5;cursor:default}
     if(!list.length) return '';
     var rentals = list.filter(function(p){return !isSFH(p);}), sfh = list.filter(isSFH);
     var h = '<h3>'+title+'</h3>'+(intro?'<p>'+intro+'</p>':'');
-    if(rentals.length) h += '<h4 class="subhead">Rentals <span>duplex, triplex, or a house with a rentable unit</span></h4><div class="props">'+rentals.map(function(p){return propCard(p, editing);}).join('')+'</div>';
-    if(sfh.length) h += '<h4 class="subhead">Single family <span>no second unit</span></h4><div class="props">'+sfh.map(function(p){return propCard(p, editing);}).join('')+'</div>';
+    if(rentals.length) h += '<h4 class="subhead rent">Rentals <span>duplex, triplex, or a house with a rentable unit</span></h4><div class="props rent">'+rentals.map(function(p){return propCard(p, editing);}).join('')+'</div>';
+    if(sfh.length) h += '<h4 class="subhead sfh">Single family <span>plain house, no second unit</span></h4><div class="props sfh">'+sfh.map(function(p){return propCard(p, editing);}).join('')+'</div>';
     return h;
   }
 
