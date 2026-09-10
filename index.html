@@ -44,6 +44,8 @@ a:focus-visible,button:focus-visible,select:focus-visible,textarea:focus-visible
 .update .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:2px}
 /* property cards */
 .props{display:flex;flex-direction:column;gap:12px;margin:10px 0 6px}
+h4.subhead{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:16px 0 0;font-weight:500}
+h4.subhead span{text-transform:none;letter-spacing:0;font-family:var(--body);font-size:.85rem;margin-left:8px}
 .prop{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;display:grid;grid-template-columns:1fr auto;gap:6px 16px}
 .prop.dropped{opacity:.72}
 .prop .head{grid-column:1;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
@@ -102,9 +104,14 @@ button:disabled{opacity:.5;cursor:default}
     return h+'</div>';
   }
 
+  function isSFH(p){ return /^single-family/i.test(p.type||''); }
   function section(title, list, editing, intro){
     if(!list.length) return '';
-    return '<h3>'+title+'</h3>'+(intro?'<p>'+intro+'</p>':'')+'<div class="props">'+list.map(function(p){return propCard(p, editing);}).join('')+'</div>';
+    var rentals = list.filter(function(p){return !isSFH(p);}), sfh = list.filter(isSFH);
+    var h = '<h3>'+title+'</h3>'+(intro?'<p>'+intro+'</p>':'');
+    if(rentals.length) h += '<h4 class="subhead">Rentals <span>duplex, triplex, or a house with a rentable unit</span></h4><div class="props">'+rentals.map(function(p){return propCard(p, editing);}).join('')+'</div>';
+    if(sfh.length) h += '<h4 class="subhead">Single family <span>no second unit</span></h4><div class="props">'+sfh.map(function(p){return propCard(p, editing);}).join('')+'</div>';
+    return h;
   }
 
   function view(state, editing){
