@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Buyer Brief for Corey</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style id="css">
+:root{
+  --bg:#f4f5f1; --bg-2:#eaece6; --panel:#fbfbf8; --line:#d3d7cf; --line-2:#b9bfb4;
+  --ink:#1c2528; --ink-2:#4a5559; --ink-3:#71807f;
+  --accent:#1f6b66; --accent-ink:#fff; --accent-soft:#d9e9e5; --warm:#b07a1e; --warm-soft:#f3e6cc;
+  --good:#2b7a3d; --good-soft:#dcefdf; --warn:#a4661a; --warn-soft:#f6e8d2; --bad:#a6362f; --bad-soft:#f4dcd9;
+  --display:"Bricolage Grotesque","Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif;
+  --body:"Source Sans 3","Source Sans Pro","Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#131a1c; --bg-2:#1b2427; --panel:#1e282b; --line:#2e3b3e; --line-2:#425155;
+  --ink:#e6ebe8; --ink-2:#b4c0bd; --ink-3:#83918f; --accent:#5fb8b0; --accent-ink:#0f1a19; --accent-soft:#1d3a38; --warm:#d9a44a; --warm-soft:#3a2e15;
+  --good:#6fc384; --good-soft:#1c3323; --warn:#dca35a; --warn-soft:#3a2b14; --bad:#e2766c; --bad-soft:#3d1f1c;}}
+:root[data-theme="dark"]{
+  --bg:#131a1c; --bg-2:#1b2427; --panel:#1e282b; --line:#2e3b3e; --line-2:#425155;
+  --ink:#e6ebe8; --ink-2:#b4c0bd; --ink-3:#83918f; --accent:#5fb8b0; --accent-ink:#0f1a19; --accent-soft:#1d3a38; --warm:#d9a44a; --warm-soft:#3a2e15;
+  --good:#6fc384; --good-soft:#1c3323; --warn:#dca35a; --warn-soft:#3a2b14; --bad:#e2766c; --bad-soft:#3d1f1c;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+.page{max-width:880px;margin:0 auto;padding:clamp(24px,5vw,56px) clamp(16px,4vw,40px) 64px}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:1.45rem;font-weight:800;margin:40px 0 10px;padding-top:16px;border-top:1px solid var(--line)}
+h3{font-size:1.05rem;font-weight:600;margin:18px 0 6px}
+p{margin:0 0 .9em;max-width:70ch}
+ul,ol{max-width:70ch;padding-left:1.25em;margin:0 0 .9em}
+li{margin:.3em 0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.meta{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.lede{font-size:1.1rem;color:var(--ink-2);margin-top:12px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin:14px 0}
+.box.warm{border-left:3px solid var(--warm);background:var(--warm-soft)}
+.kv{display:grid;grid-template-columns:180px 1fr;gap:6px 16px;font-size:.98rem}
+.kv dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding-top:4px}
+.kv dd{margin:0}
+@media (max-width:600px){.kv{grid-template-columns:1fr}}
+.update{border-left:3px solid var(--accent);padding:8px 14px;background:var(--accent-soft);border-radius:0 8px 8px 0;margin:14px 0;font-size:.98rem}
+.update .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:2px}
+/* property cards */
+.props{display:flex;flex-direction:column;gap:12px;margin:10px 0 6px}
+.prop{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;display:grid;grid-template-columns:1fr auto;gap:6px 16px}
+.prop.dropped{opacity:.72}
+.prop .head{grid-column:1;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.prop .head h4{font-size:1.08rem}
+.prop .head .rank{font-family:var(--mono);color:var(--accent);font-weight:500;margin-right:2px}
+.prop .head .price{font-family:var(--mono);font-size:.95rem;font-variant-numeric:tabular-nums}
+.prop .head .sub{color:var(--ink-3);font-size:.85rem}
+.prop .pill{grid-column:2;grid-row:1;align-self:start;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.pill.active{background:var(--good-soft);color:var(--good)} .pill.watching{background:var(--warn-soft);color:var(--warn)} .pill.dropped{background:var(--bad-soft);color:var(--bad)}
+.prop .body{grid-column:1 / -1;font-size:.96rem;color:var(--ink-2)}
+.prop .body p{margin:0 0 .5em;max-width:none}
+.prop .body .lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-right:6px}
+.prop .body .net{color:var(--ink);font-weight:600}
+.prop .note{grid-column:1 / -1;background:var(--bg-2);border-radius:6px;padding:8px 12px;font-size:.93rem}
+.prop .note .lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:2px}
+.prop .edit{grid-column:1 / -1;display:grid;grid-template-columns:160px 1fr;gap:8px;align-items:start;border-top:1px dashed var(--line-2);padding-top:10px;margin-top:4px}
+.prop .edit select,.prop .edit textarea,#latest-edit{font-family:var(--body);font-size:.92rem;padding:6px 8px;border:1px solid var(--line-2);border-radius:6px;background:var(--panel);color:var(--ink);width:100%}
+.prop .edit textarea,#latest-edit{min-height:58px;resize:vertical}
+@media (max-width:600px){.prop .edit{grid-template-columns:1fr}}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+button{font-family:var(--display);font-weight:600;font-size:.85rem;padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--panel);color:var(--ink);cursor:pointer}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+button:disabled{opacity:.5;cursor:default}
+.status-msg{font-family:var(--mono);font-size:.72rem;color:var(--ink-3)}
+.hidden{display:none!important}
+.sig{margin-top:36px;color:var(--ink-2)}
+@media print{body{background:#fff;color:#000;font-size:12pt}.page{max-width:none;padding:0}.box,.prop{break-inside:avoid}a{color:#000;text-decoration:none}h2{break-after:avoid}.tools,.edit{display:none!important}}
+</style>
+<script type="application/json" id="state">{"updated": "2026-09-10", "latest": "Ranked list, in my order. 1888 S 800 E is #1 and I have a financing plan for it that works on my income if the appraiser treats it as a 2-unit and the seller gives the full 6% credit. Out on Rose Garden Ln. 473 E 7670 S moves up to #4. Dropped 804 E 10600 S (busy road), 4401 S 700 E (rock yard) and Fenton (too big).", "props": [{"id": "800e-1888", "status": "active", "addr": "1888 S 800 E", "area": "Liberty Wells 84105", "price": "$735,000", "mls": "2179070", "url": "https://www.redfin.com/UT/Salt-Lake-City/1888-S-800-E-84105/home/91746553", "type": "Triplex", "facts": "1916 legal duplex (county has it as 1888–1890) plus an off-the-books basement unit. 4bd/1ba + two 1bd/1ba, 2 garage spaces off the Garfield alley, front and back yards. Owners since 2006, used as a single-family with an ADU. Newer roof, electrical, furnaces, water heaters, but \"needs substantial updating.\" Listed Dec 2025 at $749.9k, went pending in nine days, fell through, cut, pulled in April, relisted Aug 15 at $735k. County 2026 value $718.8k, Redfin estimate $723k.", "net": "Plan that pencils: FHA as a 2-unit (the county already has it as a duplex), my own 3.5% (~$25k), and the full 6% seller credit with ~3% buying the rate down about three-quarters of a point. At $699–715k that puts the payment near $4,700–4,900, DTI ~53–55% with the 4bd rent counted, and my net around $1,500–1,700 living in the main-floor 1bd for year one (FHA needs 12 months), then ≈ $2,600 if I move into the 4bd after that. At $735k it's a hair over the DTI line; at $690k it's comfortable.", "ask": "1) Why did the December contract fall through (inspection, appraisal, or financing)? 2) Will the seller accept FHA and a 6% credit? 3) Has the basement unit ever been permitted or licensed with the city, and does the seller's lender/appraiser history call this 2 or 3 units? 4) Are any of the $2,400 / $1,400 / $800 rents actual leases, or all estimates? 5) Can the 4bd and one 1bd be delivered vacant?", "offer": "", "note": "My #1. The whole plan lives or dies on the FHA appraiser calling it 2 units plus a basement space (3 units fails FHA's self-sufficiency test). Inspection priorities on a 1916 house: sewer scope, foundation, roof age, any remaining knob-and-tube, and peeling paint (FHA lead-paint rule). Offer thinking: it has been on and off since December with a failed contract, county value is $718.8k and Redfin's estimate $723k, so $699k with the 6% credit is a serious offer, not an insult.", "rank": 1}, {"id": "6240s", "status": "active", "addr": "310 E 6240 S", "area": "Murray 84107", "price": "$735,000", "mls": "2164458", "url": "https://www.utahrealestate.com/2164458", "type": "Triplex (legally SFR)", "facts": "2bd up, 2bd down, and a detached 1bd ADU, rents $1,745 / $1,550 / $1,450 ($4,745 total), attached 1-car garage, 1968, landscaped with mature trees. Two minutes from the shop. Under contract, accepting backup offers. Legally a single-family residence.", "net": "I'd take one of the 2bd units and rent the other 2bd plus the ADU (≈ $3,000). Real net ≈ $2,000–2,500 depending on rate. The problem is qualifying: because it's legally a single-family, FHA's $637k 1-unit limit is out, it's conventional 3–5% down, and the lender will count at most one ADU's rent. That needs about $107k of qualifying income at a buydown rate, or a co-borrower. On my own income it doesn't close at $735k.", "ask": "1) Is the current contract solid, and would the seller take a backup? 2) Has the city ever recognized the second unit or the ADU (any permit, rental license, or separate meters)? 3) Would the seller consider carrying a second (seller financing) to bridge the gap?", "offer": "", "note": "Beautiful and two minutes from work, so I want to try. Realistic routes: a co-borrower, or the price landing near $650k, or the seller carrying part of it. If none of those are possible I'll let it go.", "rank": 2}, {"id": "driggs", "status": "active", "addr": "1252 E Driggs Ave", "area": "Sugar House 84106", "price": "$599,900", "mls": "2181877", "url": "https://www.redfin.com/UT/Salt-Lake-City/1252-E-Driggs-Ave-84106/home/91750169", "type": "Duplex (up/down)", "facts": "Legal non-conforming, 1948, detached 2-car garage, large backyard, separate meters, two furnaces, new sewer line. 12 days. 12 min.", "net": "With the 1bd basement renting ~$1,300, net lands near $2,800 even with a seller-paid buydown, ≈ $3,100 without. It gets to $2,500 with a roommate in my unit, a price near $545k, or a stronger basement rent.", "ask": "Is the lower unit licensed with SLC as a rental, and what has it rented for? Would the seller do a 6% credit at $599.9k, or a price cut to the mid-$500s? Any FHA appraisal history?", "offer": "", "note": "I like this one: it lives like a house in Sugar House with a detached 2-car garage and a real backyard. New listing (12 days) so probably less room right now.", "rank": 3}, {"id": "7670", "status": "active", "addr": "473 E 7670 S", "area": "Midvale 84047", "price": "$619,500", "mls": "2179007", "url": "https://www.redfin.com/UT/Midvale/473-E-7670-S-84047/home/91815350", "type": "Duplex", "facts": "1978, ~2,540 sf, 5bd/4ba total, garage and fully fenced yard per unit. 5 min from the shop. One side updated and vacant-able, the other month-to-month.", "net": "Works only if the tenant side is the bigger unit at $2,100+: ≈ $2,650, or ≈ $2,275 with a buydown.", "ask": "Exact unit split (beds/baths per side) and what the tenant side rents for.", "offer": "", "note": "Moved up to #4. Five minutes from the shop with a garage and fenced yard per side. Need the unit split and the tenant side's rent before it's a real candidate.", "rank": 4}, {"id": "1000e-7795", "status": "active", "addr": "7795 S 1000 E", "area": "Midvale 84047", "price": "$515,400", "mls": "", "url": "https://www.redfin.com/UT/Midvale/7795-S-1000-E-84047/home/91814642", "type": "House + basement unit", "facts": "1968, attached 2-car garage, attached 2bd/1ba unit with its own kitchen and entrance, rented at $1,400, 151 days on market. 6 min.", "net": "≈ $2,390 with the existing tenant.", "ask": "Is the unit permitted with Midvale? If yes, the rent counts toward my approval and this jumps to the top of the house list.", "offer": "", "note": "If Midvale confirms the unit is permitted, this is the easiest deal on the list: existing $1,400 tenant, net ≈ $2,390, 151 days on market.", "rank": 5}, {"id": "hampton-143", "status": "active", "addr": "143 E Hampton Ave", "area": "Liberty Wells 84115", "price": "$500,000", "mls": "2164670", "url": "https://www.utahrealestate.com/2164670", "type": "House + basement suite", "facts": "Rebuilt to the studs, 1921, detached garage, walkout \"second full suite\" marketed as a house hack, 90 days. Tiny 0.07 ac lot.", "net": "≈ $2,175–2,475 if the suite has a kitchen (not stated).", "ask": "Does the suite have a kitchen and its own entrance? Permitted?", "offer": "", "note": "Small lot, but rebuilt to the studs at $500k. Need to know if the suite has a kitchen.", "rank": 6}, {"id": "2700s-829", "status": "watching", "addr": "829 E 2700 S", "area": "Sugar House line 84106", "price": "$543,000", "mls": "2140639", "url": "https://www.utahrealestate.com/2140639", "type": "House + basement unit", "facts": "Rehabbed 1949, detached garage, fenced yard, attached 2bd/1ba unit with kitchen and separate entrance, not rented, 301 days on market.", "net": "$2,490–2,790 at $1,200–1,500 rent. Works only with a real price cut.", "ask": "What's the story behind 301 days?", "offer": "", "note": "OK, not exciting. Only with a real price cut off 301 days."}, {"id": "hampton-352", "status": "watching", "addr": "352 E Hampton Ave", "area": "Central City 84111", "price": "$699,900", "mls": "", "url": "https://www.redfin.com/UT/Salt-Lake-City/352-E-Hampton-Ave-84111/home/91738513", "type": "Triplex", "facts": "Legal non-conforming duplex plus a 399 sf third unit, 1897, detached garage that rents for $350, 0.24 ac. Stated rents $2,295 and $1,535. 187 days on market. 17 min from the shop.", "net": "≈ $1,070 if I take the small unit. Best number in the valley on paper.", "ask": "Can it pass an FHA appraisal? What will the seller actually take after 187 days? Is the third unit licensed?", "offer": "", "note": "Backup. Best net on paper but 1897 and 17 minutes; I'd rather make 1888 S 800 E work."}, {"id": "rose-garden", "status": "dropped", "addr": "4358 S Rose Garden Ln", "area": "Millcreek 84124", "price": "$559,000", "mls": "2173815", "url": "https://www.redfin.com/UT/Salt-Lake-City/4358-S-Rose-Garden-Ln-84124/home/91858130", "type": "Duplex", "facts": "Brick side-by-side 2 × 2bd/1ba, 1954, 2-car garage, own fenced yard each side, cul-de-sac. 8 min from the shop. New electrical/AC 2023, roof 2017. Both sides long-term tenants (7 and 5 years). Seller financing offered.", "net": "≈ $2,500 with my own 3.5% down, ≈ $2,365 with a seller-paid point, under $2,200 with both.", "ask": "Will the seller deliver one side vacant? Current rents and lease terms? Any prior FHA appraisal?", "offer": "", "note": "Dropped: I'm out on this one."}, {"id": "10600s", "status": "dropped", "addr": "804 E 10600 S", "area": "Sandy 84094", "price": "$469,000", "mls": "", "url": "https://www.redfin.com/UT/Sandy/804-E-10600-S-84094/home/91841457", "type": "Duplex (non-conforming)", "facts": "2 × 2bd/1ba, 1952, detached garage, mostly fenced yard. Rents $2,090 total (about $1,045 a side, below market), sold with tenants. Furnace ~56 years old, no showings before an accepted offer. 11 min.", "net": "≈ $2,470 at current rent, ≈ $1,920 if the other side re-leases at market.", "ask": "Is an offer contingent on inspection realistic given \"no showings\"? Will the lender count rent on a non-conforming unit?", "offer": "", "note": "Dropped: 10600 South is too busy a road."}, {"id": "700e-4401", "status": "dropped", "addr": "4401 S 700 E", "area": "Millcreek 84107", "price": "$599,000", "mls": "2165168", "url": "https://www.redfin.com/UT/Millcreek/4401-S-700-E-84107/home/91799605", "type": "Duplex", "facts": "Remodeled 2 × 2bd up/down, 1924, oversized garage with 220V, xeriscaped yard, rents $3,025 total, 89 days. 7 min. Fronts busy 700 E.", "net": "≈ $2,550–2,650 with a buydown, so close.", "ask": "Any FHA appraisal history on a 1924 building? Lease terms?", "offer": "", "note": "Dropped: the yard is rock, not a yard."}, {"id": "fenton", "status": "dropped", "addr": "332 E Fenton Ave", "area": "South Salt Lake 84115", "price": "$759,000", "mls": "2183415", "url": "https://www.redfin.com/UT/South-Salt-Lake/332-E-Fenton-Ave-84115/home/86488451", "type": "Duplex", "facts": "1988, 2 × 3bd/2.5ba, 2-car garage and private yard per unit, $2,320 each, both leased through Aug 2027. 9 min.", "net": "Above my band, and the leases block FHA occupancy.", "ask": "Would the seller negotiate one tenant out? Only then is this interesting.", "offer": "", "note": "Dropped: too big for what I want, and both units are leased through 2027."}, {"id": "lambourne", "status": "dropped", "addr": "458 E Lambourne Ave", "area": "South Salt Lake 84115", "price": "$650,000", "mls": "2143211", "url": "https://www.redfin.com/UT/South-Salt-Lake/458-E-Lambourne-Ave-84115/home/86434133", "type": "Duplex", "facts": "2022 gut remodel, 1-car garage per unit, fenced yards, 180 days.", "net": "≈ $3,350.", "ask": "", "offer": "", "note": "Over my monthly number unless I take a roommate. Keeping it here only so you know I saw it."}]}</script>
+</head><body>
+<div id="app" class="page"></div>
+<script id="app-js">
+(function(){
+  var stateEl = document.getElementById('state');
+  var STATE = JSON.parse(stateEl.textContent);
+  var CSS = document.getElementById('css').textContent;
+  var JS = document.getElementById('app-js').textContent;
+  var esc = function(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); };
+  var LABEL = {active:'Active', watching:'Watching', dropped:'Dropped'};
+
+  function propCard(p, editing){
+    var h = '<div class="prop '+esc(p.status)+'" data-id="'+esc(p.id)+'">';
+    h += '<div class="head"><h4>'+(p.rank?'<span class="rank">#'+esc(p.rank)+'</span> ':'')+(p.url?'<a href="'+esc(p.url)+'">'+esc(p.addr)+'</a>':esc(p.addr))+'</h4><span class="price">'+esc(p.price)+'</span><span class="sub">'+esc(p.area)+(p.mls?' · MLS '+esc(p.mls):'')+' · '+esc(p.type)+'</span></div>';
+    h += '<span class="pill '+esc(p.status)+'">'+esc(LABEL[p.status]||p.status)+'</span>';
+    h += '<div class="body"><p>'+esc(p.facts)+'</p>';
+    if(p.net) h += '<p><span class="lbl">Monthly</span><span class="net">'+esc(p.net)+'</span></p>';
+    if(p.offer) h += '<p><span class="lbl">Opening offer</span>'+esc(p.offer)+'</p>';
+    if(p.ask) h += '<p><span class="lbl">Ask</span>'+esc(p.ask)+'</p>';
+    h += '</div>';
+    if(p.note) h += '<div class="note"><span class="lbl">Note</span>'+esc(p.note)+'</div>';
+    if(editing){
+      h += '<div class="edit"><select data-field="status">';
+      ['active','watching','dropped'].forEach(function(s){ h += '<option value="'+s+'"'+(p.status===s?' selected':'')+'>'+LABEL[s]+'</option>'; });
+      h += '</select><textarea data-field="note" placeholder="Note for Corey (why it moved, what we learned)">'+esc(p.note)+'</textarea></div>';
+    }
+    return h+'</div>';
+  }
+
+  function section(title, list, editing, intro){
+    if(!list.length) return '';
+    return '<h3>'+title+'</h3>'+(intro?'<p>'+intro+'</p>':'')+'<div class="props">'+list.map(function(p){return propCard(p, editing);}).join('')+'</div>';
+  }
+
+  function view(state, editing){
+    var props = state.props;
+    var active = props.filter(function(p){return p.status==='active';});
+    var watching = props.filter(function(p){return p.status==='watching';});
+    var dropped = props.filter(function(p){return p.status==='dropped';});
+    var h = '';
+    h += '<div class="meta"><span>Buyer brief · updated '+esc(state.updated)+'</span><span class="tools"><button id="edit-btn" class="hidden">Edit</button><button id="save-btn" class="primary hidden">Save changes</button><button id="cancel-btn" class="hidden">Cancel</button><span class="status-msg" id="msg"></span></span></div>';
+    h += '<h1>What I\'m looking for, Corey</h1>';
+    h += '<p class="lede">This is my living list. I\'ll keep it current as we narrow in: active means tour or make a call, watching means it needs an answer first, dropped stays at the bottom with the reason so you know I saw it.</p>';
+    h += '<div class="update"><span class="k">Latest</span>'+(editing?'<textarea id="latest-edit">'+esc(state.latest)+'</textarea>':esc(state.latest))+'</div>';
+
+    h += '<h2>The target</h2><div class="box"><dl class="kv">';
+    h += '<dt>Property</dt><dd><strong>A legal 2–4 unit building I can live in one unit of.</strong> A cheap duplex or a 3–4 unit where two or three rents carry the payment both work. A house with a permitted basement apartment is the backup; a plain single-family under my number means Kearns or West Valley, so I\'m not chasing that.</dd>';
+    h += '<dt>Must have</dt><dd>A yard and a garage (attached or detached). Carports don\'t count.</dd>';
+    h += '<dt>Location</dt><dd>Within 20 minutes of my shop at 6092 S 900 E, Murray. East of I-15, inside the I-215 / I-80 belt: Murray, Midvale, Millcreek, Holladay, Cottonwood Heights, Sandy, South Salt Lake, Sugar House. Liberty Wells is the northern stretch.</dd>';
+    h += '<dt>Monthly ceiling</dt><dd><strong>$2,500/month net after tenant rent, and cheaper is better.</strong> This is the number I\'m optimizing for.</dd>';
+    h += '<dt>Price</dt><dd>What $2,500 net implies at today\'s FHA rates: <strong>≤ ~$530–580k for a duplex</strong> with one 2bd tenant at ~$1,600 (the higher end if the seller pays a point to buy the rate down), ≤ ~$610k if the tenant unit is a 3bd/2ba, or <strong>up to ~$750k for a 3–4 unit</strong> where I live in the smallest unit. I\'ll ask for the full 6% FHA seller credit on every offer: 3% for closing, the rest toward rate.</dd>';
+    h += '<dt>Timing</dt><dd>Ready to tour now. Pre-approval letter within a couple of weeks.</dd></dl></div>';
+
+    h += '<h2>How I\'m financing it, and what that means for offers</h2>';
+    h += '<p>Owner-occupant <strong>FHA</strong> with the 3.5% covered by a down-payment-assistance second (Chenoa Fund or Utah Housing\'s DPA second). I\'d rather keep my cash as reserves. County and city grants are out; my income is over their 80% AMI limit.</p>';
+    h += '<p>Chenoa and Utah Housing cap at 2 units; on a 3–4 unit it\'s plain FHA with my own 3.5% and FHA\'s self-sufficiency test (75% of all rents must cover the full payment). The lender counts 75% of a legal unit\'s market rent toward my income, which is what makes the approval work. A non-conforming basement apartment usually can\'t be counted.</p>';
+    h += '<div class="box warm"><p><strong>Screen for these before we tour:</strong></p><ul>';
+    h += '<li><strong>Seller accepts FHA.</strong> "Cash or conventional only" is a pass.</li>';
+    h += '<li><strong>FHA appraisal condition.</strong> Pre-1940, peeling paint, roof life, knob-and-tube: anything that has failed an FHA appraisal before is a pass.</li>';
+    h += '<li><strong>One unit vacant at closing.</strong> FHA needs me in within 60 days.</li>';
+    h += '<li><strong>Seller credit.</strong> Up to 6% on FHA; I\'ll ask for all of it and trade price for credit.</li>';
+    h += '<li><strong>Legal unit.</strong> Separate meters, permitted, licensable.</li></ul></div>';
+
+    h += '<h2>The list</h2>';
+    h += section('Ranked', active, editing, 'In my order. #1 is the one I want to make work.');
+    h += section('Watching / backups', watching, editing, 'Not ranked, but not dead. Each has one question that decides it.');
+    h += section('Dropped', dropped, editing);
+
+    h += '<h2>Already ruled out (so you can skip them)</h2><ul>';
+    h += '<li><strong>Carports or no garage:</strong> 1893 E Wellington Cir (Holladay), 429 E 5600 S (Murray), 3965 S 1300 E and 3420 S 2000 E (Millcreek), 815 E Whitemaple Way, 1241 S 300 E, 285 E Vidas, 170 E Wentworth, 817 E Ramona, 1145 Kensington, 1418 E 3900 S, 3761 S 300 E, 644 S Grand, and every 4-plex I found in South Salt Lake, Sugar House, Liberty Wells and Ballpark (1012 S West Temple, 568 S 900 E, 119 E Leslie, McCall, Vidas, Welby, Edison).</li>';
+    h += '<li><strong>Over budget or sold as a pair:</strong> 1761 + 1771 E Fort Union Blvd ($1.5M for both), 2358 E Gregson Ave ($1.2M), 3915 S Feramorz ($1.45M), 7667 S Birch St ($795k), 6824 S 700 E ($775k), 5313 S Alpine ($750k), 4520 S Julep ($689.9k), 27–29 E Main St Sandy ($689k, leased through 2027).</li>';
+    h += '<li><strong>Not actually duplexes:</strong> 7353 S 700 E, 740 E Baker Dr, 7238 S 525 E, 4833 Arbor Cir are twin-homes or townhomes.</li>';
+    h += '<li><strong>Too old or rough for FHA:</strong> 1631 S 500 E (1902 four-plex), 90 W 7500 S (1930).</li></ul>';
+
+    h += '<h2>What I\'d like from you</h2><ol>';
+    h += '<li><strong>Two MLS auto-searches:</strong> (a) 2-unit properties up to $600k, east of I-15 in zips 84105, 84106, 84107, 84109, 84115, 84117, 84121, 84124, 84047, 84070, 84094, any parking; (b) 3–4 unit up to $800k, same zips. Lower priority: single-family with a legal ADU and a garage up to $560k.</li>';
+    h += '<li><strong>Agent-to-agent on the active list:</strong> FHA accepted? Current rents and lease end dates? Can one unit be delivered vacant? Any prior FHA appraisal? Each card\'s "Ask" line has the specific question.</li>';
+    h += '<li><strong>Rent comps</strong> for 2bd/1ba and 3bd/2ba in Millcreek, Murray, Midvale, and Sugar House; the appraiser\'s market rent is what the lender uses.</li>';
+    h += '<li><strong>A lender you trust</strong> who does both Utah Housing and Chenoa, so I can get two pre-approvals side by side.</li>';
+    h += '<li><strong>Your read on non-conforming units</strong> and how Murray, Midvale, Millcreek, and SLC are treating them on licensing and HB 82 ADU permits.</li>';
+    h += '<li><strong>Tours</strong> in ranked order. 1888 S 800 E first, and I\'d like to see it before we write anything.</li>';
+    h += '<li><strong>Off-market and expired.</strong> Sub-$550k duplexes rarely last; if you can reach owners of tired 2–4 unit buildings in Murray, Midvale, and South Salt Lake, I\'m interested.</li>';
+    h += '<li><strong>Buyer-agent agreement</strong> sorted before the first showing.</li></ol>';
+    h += '<p class="sig">Thanks, man. Tell me what I\'ve got wrong.<br>Ben</p>';
+    return h;
+  }
+
+  function fullDoc(state){
+    var json = JSON.stringify(state).replace(/<\//g, '<\\/');
+    return '<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Buyer Brief for Corey</title>'
+      + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">'
+      + '<style id="css">' + CSS + '</style>'
+      + '<script type="application/json" id="state">' + json + '<\/script>'
+      + '</head><body><div id="app" class="page">' + view(state, false) + '</div>'
+      + '<script id="app-js">' + JS + '<\/script></body></html>';
+  }
+
+  var app = document.getElementById('app');
+  var editing = false;
+  var artifact = null;
+
+  function render(){
+    app.innerHTML = view(STATE, editing);
+    var eb = document.getElementById('edit-btn'), sb = document.getElementById('save-btn'), cb = document.getElementById('cancel-btn');
+    if(artifact){ eb.classList.toggle('hidden', editing); sb.classList.toggle('hidden', !editing); cb.classList.toggle('hidden', !editing); }
+    eb.onclick = function(){ editing = true; render(); };
+    cb.onclick = function(){ editing = false; render(); };
+    sb.onclick = save;
+  }
+
+  function collect(){
+    var next = JSON.parse(JSON.stringify(STATE));
+    var latest = document.getElementById('latest-edit');
+    if(latest) next.latest = latest.value.trim();
+    Array.prototype.forEach.call(app.querySelectorAll('.prop'), function(card){
+      var id = card.getAttribute('data-id');
+      var p = next.props.filter(function(x){return x.id===id;})[0]; if(!p) return;
+      var s = card.querySelector('[data-field="status"]'), n = card.querySelector('[data-field="note"]');
+      if(s) p.status = s.value; if(n) p.note = n.value.trim();
+    });
+    next.updated = new Date().toISOString().slice(0,10);
+    return next;
+  }
+
+  function save(){
+    if(!artifact) return;
+    var msg = document.getElementById('msg'), sb = document.getElementById('save-btn');
+    var next = collect();
+    sb.disabled = true; msg.textContent = 'Saving…';
+    artifact.publish(fullDoc(next)).then(function(){ msg.textContent = 'Saved. Reloading…'; }).catch(function(e){
+      var code = e && e.code;
+      if(code === 'conflict'){ msg.textContent = 'Someone saved a newer version; reloading to it.'; return; }
+      if(code === 'not_writer' || code === 'not_granted'){ artifact = null; editing = false; render(); document.getElementById('msg').textContent = 'Read-only view.'; return; }
+      sb.disabled = false; msg.textContent = 'Could not save (' + (code || 'error') + '). Try again.';
+    });
+  }
+
+  render();
+  if(window.claude && typeof window.claude.use === 'function'){
+    window.claude.use('artifact').then(function(ns){ if(ns){ artifact = ns; render(); } }).catch(function(){});
+  }
+})();
+</script>
+
+</body></html>
