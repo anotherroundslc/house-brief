@@ -119,6 +119,7 @@ ol.tour>li{background:var(--panel);border:1px solid var(--line);border-radius:10
 .tour-time{font-family:var(--mono);font-weight:500;color:var(--accent);min-width:70px}
 ol.tour ul{margin:6px 0 0;font-size:.93rem;color:var(--ink-2)}
 .leaflet-container{font-family:var(--body)}
+.tiles-dark{filter:invert(1) hue-rotate(180deg) brightness(.92) contrast(.9) saturate(.6)}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel);color:var(--ink)}
 .leaflet-popup-content{font-size:14px;line-height:1.45}
 @media print{body{background:#fff;color:#000;font-size:12pt}.page{max-width:none;padding:0}.box,.prop{break-inside:avoid}a{color:#000;text-decoration:none}h2{break-after:avoid}.tools,.edit{display:none!important}}
@@ -269,7 +270,7 @@ ol.tour ul{margin:6px 0 0;font-size:.93rem;color:var(--ink-2)}
     var th=document.documentElement.getAttribute('data-theme');
     var dark = th==='dark' || (th!=='light' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
     leafMap=L.map(el,{scrollWheelZoom:false}).setView([GEO.shop.lat,GEO.shop.lon],11);
-    var errs=0, tl=L.tileLayer('https://{s}.basemaps.cartocdn.com/'+(dark?'dark_all':'light_all')+'/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap contributors &copy; CARTO',subdomains:'abcd',maxZoom:19});
+    var errs=0, tl=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',maxZoom:19,className:dark?'tiles-dark':''});
     tl.on('tileerror',function(){ errs++; if(errs===3){ var n=document.getElementById('map-note'); if(n) n.classList.remove('hidden'); } });
     tl.addTo(leafMap);
     if(GEO.band && GEO.band.length>2) L.polygon(GEO.band,{color:col('--accent'),weight:1,dashArray:'5 5',fillColor:col('--accent'),fillOpacity:.07,interactive:false}).addTo(leafMap);
